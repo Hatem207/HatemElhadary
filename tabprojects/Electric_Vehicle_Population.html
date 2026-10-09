@@ -1,0 +1,421 @@
+```html
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Electric Vehicle Analytics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+
+		<style>
+			.project-detail-hero {
+				width: 100%; max-width: 100%; box-sizing: border-box;
+				overflow: hidden; margin: 0 0 2rem 0;
+			}
+			.project-detail-hero img {
+				display: block; width: 100%; max-width: 100%; height: auto;
+				object-fit: contain; border-radius: 6px; margin: 0 auto 2rem auto;
+				box-sizing: border-box;
+			}
+			.project-detail-meta {
+				display: flex; flex-wrap: wrap; gap: 0.6em; list-style: none;
+				padding: 0; margin: 0 0 2rem 0;
+			}
+			.project-detail-meta li {
+				font-size: 0.78em; font-weight: 700; text-transform: uppercase;
+				letter-spacing: 0.03em; padding: 0.4em 0.9em; border-radius: 100px;
+				border: 1px solid rgba(242,200,17,0.6); color: rgba(0,0,0,0.75);
+			}
+			.tableau-embed {
+				width: 100%; max-width: 100%; box-sizing: border-box;
+				overflow: hidden; margin: 1.5rem 0 2rem 0;
+			}
+			.tableau-embed iframe {
+				display: block; width: 100%; min-height: 650px; border: 0;
+			}
+			.dashboard-section { margin-top: 2.5rem; }
+			.dashboard-section h3 { margin-bottom: 0.5rem; }
+			.tableau-result {
+				background: rgba(242,200,17,0.08);
+				border-left: 4px solid rgba(242,200,17,0.8);
+				padding: 1rem 1.25rem; margin: 1rem 0 2rem 0;
+				box-sizing: border-box;
+			}
+			.dashboard-gallery {
+				display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1rem; margin: 1.5rem 0 2rem 0;
+			}
+			.dashboard-gallery img {
+				display: block; width: 100%; height: auto; border-radius: 6px;
+			}
+			.dashboard-gallery figure { margin: 0; min-width: 0; }
+			.dashboard-gallery figcaption { font-size: 0.9em; margin-top: 0.5rem; }
+			.project-links { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+			.back-link { display: inline-block; margin-top: 2rem; }
+			@media screen and (max-width: 736px) {
+				.dashboard-gallery { grid-template-columns: 1fr; }
+				.tableau-embed iframe { min-height: 500px; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+
+			<!-- =========================
+			     HEADER
+			========================= -->
+
+			<header id="header">
+				<a href="../index.html" class="logo">HNEL</a>
+			</header>
+
+
+			<!-- =========================
+			     NAVIGATION
+			========================= -->
+
+			<nav id="nav">
+
+				<ul class="links">
+					<li>
+						<a href="../index.html">Main</a>
+					</li>
+
+					<li class="active">
+						<a href="../generic.html">Projects</a>
+					</li>
+				</ul>
+
+
+				<ul class="icons alt">
+
+					<li>
+						<a href="https://www.facebook.com/ha.tem.445356"
+						   target="_blank"
+						   class="icon brands alt fa-facebook-f">
+							<span class="label">Facebook</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://instagram.com/ha.tem"
+						   target="_blank"
+						   class="icon brands alt fa-instagram">
+							<span class="label">Instagram</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://linkedin.com/in/hatem-el-hadary"
+						   target="_blank"
+						   class="icon brands alt fa-linkedin-in">
+							<span class="label">LinkedIn</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://github.com/Hatem207"
+						   target="_blank"
+						   class="icon brands alt fa-github">
+							<span class="label">GitHub</span>
+						</a>
+					</li>
+
+				</ul>
+
+			</nav>
+
+
+
+			<!-- =========================
+			     MAIN CONTENT
+			========================= -->
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<span class="date">Tableau Project</span>
+						<h1>Electric Vehicle<br />Analytics Dashboard</h1>
+					</header>
+
+					<h3>Project Overview</h3>
+					<p>
+						This Tableau dashboard provides a comprehensive analysis of electric vehicle
+						registrations and adoption trends. It helps users explore EV growth, vehicle types,
+						manufacturers, models, electric range, CAFV eligibility, and geographic distribution
+						through interactive dashboards and key performance indicators (KPIs).
+					</p>
+					<p>
+						The dashboard is designed to provide a clear overview of the electric vehicle market
+						and support data-driven insights into EV adoption patterns.
+					</p>
+
+					<!-- Replace the image path with your dashboard screenshot -->
+					<div class="image main project-detail-hero">
+						<img src="https://github.com/Hatem207/Tableau-Electric-Vehicle-Analytics/blob/main/Dashoard.png?raw=true"
+							alt="Electric Vehicle Analytics Tableau dashboard" />
+					</div>
+
+					<ul class="project-detail-meta">
+						<li>Tableau</li>
+						<li>Tableau Desktop</li>
+						<li>Data Visualization</li>
+						<li>Calculated Fields</li>
+						<li>Geographic Mapping</li>
+						<li>Interactive Dashboards</li>
+					</ul>
+
+					<h3>Business Problem</h3>
+					<p>
+						The electric vehicle market is growing rapidly, creating a need to understand
+						adoption trends, vehicle manufacturers, popular models, geographic distribution,
+						and vehicle characteristics. This dashboard uses electric vehicle population data
+						to explore these questions and provide a clear overview of the market.
+					</p>
+
+					<h3>Business Questions</h3>
+					<ul>
+						<li>How many electric vehicles are registered in the analyzed dataset?</li>
+						<li>What percentage of vehicles are BEVs and PHEVs?</li>
+						<li>Which manufacturers and models are most common?</li>
+						<li>How has EV adoption changed across model years?</li>
+						<li>Which U.S. states have the highest concentration of EVs?</li>
+						<li>What is the CAFV eligibility distribution?</li>
+						<li>What is the average electric driving range?</li>
+					</ul>
+
+					<h3>Dashboard Pages</h3>
+					<p>
+						The Executive Dashboard brings the main electric vehicle metrics and visualizations
+						together in one interactive view.
+					</p>
+					<ul>
+						<li>Total Vehicles</li>
+						<li>BEV Vehicles % and PHEV Vehicles %</li>
+						<li>Average Electric Range</li>
+						<li>Top 10 EV Makes</li>
+						<li>EV Growth by Model Year</li>
+						<li>CAFV Eligibility</li>
+						<li>EVs by State</li>
+						<li>Top 10 EV Models</li>
+					</ul>
+
+					<div class="dashboard-section">
+						<h3>01. Top 10 EV Makes</h3>
+						<p>
+							Compares manufacturers by registered vehicle count and highlights leading makes
+							such as Tesla, Nissan, Chevrolet, Ford, BMW, Kia, Toyota, and Volkswagen.
+						</p>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>02. EV Growth by Model Year</h3>
+						<p>
+							Shows how the number of electric vehicles changes across model years, helping
+							users explore adoption trends, periods of growth, and recent market expansion.
+						</p>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>03. CAFV Eligibility</h3>
+						<p>
+							Examines Clean Alternative Fuel Vehicle eligibility categories: eligible,
+							eligibility unknown, and not eligible due to low battery range.
+						</p>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>04. Geographic Distribution</h3>
+						<p>
+							Maps EV registrations across U.S. states to reveal geographic concentration and
+							identify areas with higher electric vehicle adoption.
+						</p>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>05. Top 10 EV Models</h3>
+						<p>
+							Displays the most common vehicle models, including models such as Model Y,
+							Model 3, Leaf, Model S, Bolt EV, Volt, Niro, Model X, and ID.4.
+						</p>
+					</div>
+
+					<h3>Interactive Features</h3>
+					<ul>
+						<li>Model Year Range Filter</li>
+						<li>State, Model, and Make Filters</li>
+						<li>Dynamic Cross-Filtering</li>
+						<li>Interactive Geographic Map</li>
+						<li>Interactive Charts and Hover Tooltips</li>
+						<li>Dynamic KPI Updates</li>
+					</ul>
+
+					<h3>Key Insights</h3>
+					<ul>
+						<li>The dashboard reports approximately <strong>149,804 registered electric vehicles</strong> in the analyzed dataset.</li>
+						<li>Battery Electric Vehicles (BEVs) represent the majority of the analyzed EV population.</li>
+						<li>Plug-in Hybrid Electric Vehicles (PHEVs) represent a smaller portion of the market.</li>
+						<li>Tesla is the leading EV manufacturer in the dataset by a significant margin.</li>
+						<li>Model Y and Model 3 are among the most popular EV models.</li>
+						<li>EV registrations show strong growth in more recent model years.</li>
+						<li>A significant portion of vehicles has an unknown CAFV eligibility status.</li>
+						<li>EVs are geographically concentrated in specific U.S. states.</li>
+					</ul>
+
+					<h3>Dataset</h3>
+					<p>
+						The project uses the Electric Vehicle Population Data dataset. Available fields
+						include VIN, County, City, State, Postal Code, Model Year, Make, Model, Electric
+						Vehicle Type, CAFV Eligibility, Electric Range, Base MSRP, Legislative District,
+						Vehicle Location, Electric Utility, and Census Tract.
+					</p>
+
+					<h3>Business Value</h3>
+					<ul>
+						<li>Help automotive companies understand market competition.</li>
+						<li>Help manufacturers identify popular EV models.</li>
+						<li>Allow analysts to monitor EV adoption trends.</li>
+						<li>Help policy makers understand geographic EV distribution.</li>
+						<li>Support evaluation of EV market opportunities and areas with high adoption potential.</li>
+					</ul>
+
+					<h3>Dashboard Design</h3>
+					<p>
+						The dashboard uses a dark professional theme and interactive components, including
+						KPI cards, bar charts, line charts, pie charts, geographic maps, treemaps, and filters.
+					</p>
+
+					<h3>Tools and Skills Demonstrated</h3>
+					<ul>
+						<li>Tableau Desktop</li>
+						<li>Calculated Fields</li>
+						<li>KPI Design</li>
+						<li>Interactive Dashboard Development</li>
+						<li>Filters and Parameters</li>
+						<li>Geographic Mapping</li>
+						<li>Data Visualization and Analysis</li>
+						<li>Dashboard Layout and Visual Design</li>
+					</ul>
+
+					<h3>Project Outcome</h3>
+					<p>
+						This project turns electric vehicle population data into an interactive dashboard
+						for exploring EV adoption, vehicle types, leading manufacturers and models, driving
+						range, CAFV eligibility, and geographic distribution. It demonstrates how Tableau
+						can help communicate market patterns and support data-driven exploration.
+					</p>
+
+					<ul class="actions special project-links">
+						<li><a href="https://github.com/Hatem207/Tableau-Electric-Vehicle-Analytics" target="_blank" rel="noopener noreferrer" class="button">GitHub Project</a></li>
+					</ul>
+
+					<a href="../generic.html#tableau" class="button back-link">⬅ Back to Projects</a>
+				</section>
+			</div>
+			<!-- =========================
+			     FOOTER
+			========================= -->
+
+			<footer id="footer">
+
+				<section class="split contact">
+
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Shebin Elkom, menofia</p>
+					</section>
+
+					<section>
+						<h3>Phone</h3>
+						<p>
+							<a href="tel:+201099430032">
+								(+20) 01099430032
+							</a>
+						</p>
+					</section>
+
+					<section>
+						<h3>Email</h3>
+						<p>
+							<a href="mailto:hatemelhadry7@gmail.com">
+								hatemelhadry7@gmail.com
+							</a>
+						</p>
+					</section>
+
+					<section>
+
+						<h3>Social</h3>
+
+						<ul class="icons alt">
+
+							<li>
+								<a
+									href="https://www.facebook.com/ha.tem.445356"
+									target="_blank"
+									class="icon brands alt fa-facebook-f">
+									<span class="label">Facebook</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="https://instagram.com/ha.tem"
+									target="_blank"
+									class="icon brands alt fa-instagram">
+									<span class="label">Instagram</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="https://linkedin.com/in/hatem-el-hadary"
+									target="_blank"
+									class="icon brands alt fa-linkedin-in">
+									<span class="label">LinkedIn</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="https://github.com/Hatem207"
+									target="_blank"
+									class="icon brands alt fa-github">
+									<span class="label">GitHub</span>
+								</a>
+							</li>
+
+						</ul>
+
+					</section>
+
+				</section>
+
+			</footer>
+
+
+			<div id="copyright">
+
+				<ul>
+					<li>&copy; HNEL</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
+```

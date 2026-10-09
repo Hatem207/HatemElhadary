@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Online Retail Sales Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<style>
+			.project-detail-hero {
+				width: 100%; max-width: 100%; box-sizing: border-box;
+				overflow: hidden; margin: 0 0 2rem 0;
+			}
+			.project-detail-hero img {
+				display: block; width: 100%; max-width: 100%; height: auto;
+				object-fit: contain; border-radius: 6px; margin: 0 auto 2rem auto;
+				box-sizing: border-box;
+			}
+			.project-detail-meta {
+				display: flex; flex-wrap: wrap; gap: 0.6em; list-style: none;
+				padding: 0; margin: 0 0 2rem 0;
+			}
+			.project-detail-meta li {
+				font-size: 0.78em; font-weight: 700; text-transform: uppercase;
+				letter-spacing: 0.03em; padding: 0.4em 0.9em; border-radius: 100px;
+				border: 1px solid rgba(242,200,17,0.6); color: rgba(0,0,0,0.75);
+			}
+			.dashboard-section { margin-top: 2.5rem; }
+			.dashboard-section h3 { margin-bottom: 0.5rem; }
+			.tableau-result {
+				background: rgba(242,200,17,0.08);
+				border-left: 4px solid rgba(242,200,17,0.8);
+				padding: 1rem 1.25rem; margin: 1rem 0 2rem 0;
+				box-sizing: border-box;
+			}
+			.dashboard-gallery {
+				display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1rem; margin: 1.5rem 0 2rem 0;
+			}
+			.dashboard-gallery img {
+				display: block; width: 100%; height: auto; border-radius: 6px;
+			}
+			.dashboard-gallery figure { margin: 0; min-width: 0; }
+			.dashboard-gallery figcaption { font-size: 0.9em; margin-top: 0.5rem; }
+			.project-links { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+			.back-link { display: inline-block; margin-top: 2rem; }
+			@media screen and (max-width: 736px) {
+				.dashboard-gallery { grid-template-columns: 1fr; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<!-- HEADER -->
+			<header id="header">
+				<a href="../index.html" class="logo">HNEL</a>
+			</header>
+
+			<!-- NAVIGATION -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">Main</a></li>
+					<li class="active"><a href="../generic.html">Projects</a></li>
+				</ul>
+
+				<ul class="icons alt">
+					<li><a href="https://www.facebook.com/ha.tem.445356" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://instagram.com/ha.tem" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://linkedin.com/in/hatem-el-hadary" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/Hatem207" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- MAIN CONTENT -->
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<span class="date">Tableau Project</span>
+						<h1>Online Retail<br />Sales Analysis Dashboard</h1>
+					</header>
+
+					<h3>Project Overview</h3>
+					<p>
+						This Tableau dashboard provides a comprehensive analysis of online retail sales and
+						customer behavior. It helps businesses monitor revenue performance, customer
+						distribution, order activity, product performance, geographic sales, and customer
+						revenue contribution through interactive dashboards and key performance indicators (KPIs).
+						The project turns transactional retail data into business insights that support sales
+						monitoring and customer-focused decision-making.
+					</p>
+
+					<div class="image main project-detail-hero">
+						<img src="https://raw.githubusercontent.com/Hatem207/Tableau-Online-Retail-Sales/main/Executive%20Sales%20Dashboard.png"
+							alt="Executive Sales Dashboard" />
+					</div>
+
+					<ul class="project-detail-meta">
+						<li>Tableau</li>
+						<li>Tableau Calculations</li>
+						<li>Data Cleaning</li>
+						<li>Data Analysis</li>
+						<li>KPI Development</li>
+						<li>Dashboard Design</li>
+					</ul>
+
+					<h3>Business Problem</h3>
+					<p>
+						Online retail businesses generate large volumes of transactional data every day.
+						Without proper analysis, it is hard to understand sales trends, identify high-value
+						customers, monitor product performance, and see which countries contribute most to
+						revenue. This dashboard gives decision-makers a centralized view of sales and
+						customer performance.
+					</p>
+
+					<h3>Project Objective</h3>
+					<p>
+						Transform transactional retail data into an interactive Tableau dashboard that supports
+						sales performance monitoring and data-driven, customer-focused decisions.
+					</p>
+
+					<h3>Business Questions</h3>
+					<ul>
+						<li>How is revenue trending over time, and is it growing or declining?</li>
+						<li>Which customers contribute the most revenue?</li>
+						<li>Which products and countries perform best?</li>
+						<li>What does Average Order Value say about customer purchasing behavior?</li>
+					</ul>
+
+					<h3>Dataset</h3>
+					<p>
+						The project uses an <strong>Online Retail</strong> transactional dataset of approximately
+						10,000 records with the fields InvoiceNo, StockCode, Description, Quantity, InvoiceDate,
+						UnitPrice, CustomerID, and Country.
+					</p>
+
+					<h3>Key KPIs</h3>
+					<ul>
+						<li>Total Revenue</li>
+						<li>Total Orders</li>
+						<li>Total Quantity</li>
+						<li>Total Customers</li>
+						<li>Average Order Value (AOV)</li>
+						<li>Average Revenue per Customer</li>
+						<li>Revenue Growth %</li>
+					</ul>
+
+					<h3>Key Calculations</h3>
+					<ul>
+						<li><strong>Revenue:</strong> <code>Quantity × Unit Price</code></li>
+						<li><strong>Average Order Value:</strong> <code>Total Revenue ÷ Distinct Orders</code></li>
+						<li><strong>Average Revenue per Customer:</strong> <code>Total Revenue ÷ Distinct Customers</code></li>
+						<li><strong>Revenue Growth %:</strong> <code>(Current Revenue − Previous Revenue) ÷ Previous Revenue</code></li>
+					</ul>
+
+					<h3>Dashboard Overview</h3>
+
+					<div class="dashboard-section">
+						<h3>01. Executive Sales Dashboard</h3>
+						<p>
+							Total revenue, total orders, quantity sold, customer count, AOV, average revenue per
+							customer, and revenue growth, alongside the revenue trend over time, revenue by
+							country, top 10 products by revenue, and top customers by revenue.
+						</p>
+						<div class="tableau-result">
+							<strong>Purpose:</strong> Give decision-makers a quick snapshot of overall sales performance.
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>02. Customer Analytics</h3>
+						<p>
+							Customer distribution by country, customer revenue distribution, revenue contribution
+							by customer, revenue-based customer segmentation, and average revenue per customer.
+						</p>
+						<div class="tableau-result">
+							<strong>Questions answered:</strong> Who are the highest-value customers, and how concentrated is revenue?
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>03. Product and Geographic Analysis</h3>
+						<p>
+							Top 10 products by revenue, product-level comparison and ranking, revenue by country,
+							and identification of high-performing markets.
+						</p>
+						<div class="tableau-result">
+							<strong>Questions answered:</strong> Which products and markets drive the most revenue?
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>04. Filters and Interactivity</h3>
+						<p>
+							Dynamic filtering and cross-filtering between visualizations, with time-based,
+							country-level, customer-level, and product-level analysis and interactive KPI monitoring.
+						</p>
+					</div>
+
+					<h3>Business Insights</h3>
+					<ul>
+						<li><strong>Trends:</strong> Revenue can be monitored across periods to identify growth and decline.</li>
+						<li><strong>Customer concentration:</strong> A relatively small group of customers can contribute a significant portion of total revenue.</li>
+						<li><strong>Geography:</strong> Customer distribution varies significantly across countries, and revenue by country highlights the strongest markets.</li>
+						<li><strong>Products:</strong> Top-performing products offer opportunities for inventory and sales optimization.</li>
+						<li><strong>Behavior:</strong> Average Order Value is an important indicator of purchasing behavior.</li>
+					</ul>
+
+					<h3>Business Value</h3>
+					<ul>
+						<li>Monitor overall sales performance and track revenue growth.</li>
+						<li>Identify high-value customers and analyze purchasing behavior.</li>
+						<li>Identify top-performing products and compare revenue across countries.</li>
+						<li>Support sales and marketing decisions and customer-focused strategies.</li>
+					</ul>
+
+					<h3>Dashboard Screenshots</h3>
+					<div class="dashboard-gallery">
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-Online-Retail-Sales/main/Executive%20Sales%20Dashboard.png" alt="Executive Sales Dashboard" />
+							<figcaption>Executive Sales Dashboard — KPIs, revenue trend, top products, countries, and customers.</figcaption>
+						</figure>
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-Online-Retail-Sales/main/CUSTOMER%20ANALYTICS%20Dashboard.png" alt="Customer Analytics Dashboard" />
+							<figcaption>Customer Analytics — distribution by country and revenue contribution by customer.</figcaption>
+						</figure>
+					</div>
+
+					<h3>Skills Demonstrated</h3>
+					<ul>
+						<li>Interactive Dashboard Design</li>
+						<li>KPI Development and Tableau Calculations</li>
+						<li>Data Cleaning and Analysis</li>
+						<li>Data Visualization and Chart Selection</li>
+						<li>Customer and Sales Analytics</li>
+					</ul>
+
+					<h3>Project Outcome</h3>
+					<p>
+						The project delivers a two-page interactive Tableau dashboard that turns raw
+						transactional data into clear views of revenue, customers, products, and markets,
+						helping retail teams monitor performance and focus on their highest-value customers
+						and products.
+					</p>
+
+					<ul class="actions special project-links">
+						<li><a href="https://github.com/Hatem207/Tableau-Online-Retail-Sales" target="_blank" rel="noopener noreferrer" class="button">View on GitHub</a></li>
+					</ul>
+
+					<a href="../generic.html#tableau" class="button back-link">⬅ Back to Projects</a>
+				</section>
+			</div>
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Shebin Elkom, menofia</p>
+					</section>
+
+					<section>
+						<h3>Phone</h3>
+						<p><a href="tel:+201099430032">(+20) 01099430032</a></p>
+					</section>
+
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:hatemelhadry7@gmail.com">hatemelhadry7@gmail.com</a></p>
+					</section>
+
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://www.facebook.com/ha.tem.445356" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://instagram.com/ha.tem" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://linkedin.com/in/hatem-el-hadary" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Hatem207" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+			<div id="copyright">
+				<ul><li>&copy; HNEL</li></ul>
+			</div>
+
+		</div>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HR Analytics – Employee Attrition</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<style>
+			.project-detail-hero {
+				width: 100%; max-width: 100%; box-sizing: border-box;
+				overflow: hidden; margin: 0 0 2rem 0;
+			}
+			.project-detail-hero img {
+				display: block; width: 100%; max-width: 100%; height: auto;
+				object-fit: contain; border-radius: 6px; margin: 0 auto 2rem auto;
+				box-sizing: border-box;
+			}
+			.project-detail-meta {
+				display: flex; flex-wrap: wrap; gap: 0.6em; list-style: none;
+				padding: 0; margin: 0 0 2rem 0;
+			}
+			.project-detail-meta li {
+				font-size: 0.78em; font-weight: 700; text-transform: uppercase;
+				letter-spacing: 0.03em; padding: 0.4em 0.9em; border-radius: 100px;
+				border: 1px solid rgba(242,200,17,0.6); color: rgba(0,0,0,0.75);
+			}
+			.dashboard-section { margin-top: 2.5rem; }
+			.dashboard-section h3 { margin-bottom: 0.5rem; }
+			.tableau-result {
+				background: rgba(242,200,17,0.08);
+				border-left: 4px solid rgba(242,200,17,0.8);
+				padding: 1rem 1.25rem; margin: 1rem 0 2rem 0;
+				box-sizing: border-box;
+			}
+			.dashboard-gallery {
+				display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1rem; margin: 1.5rem 0 2rem 0;
+			}
+			.dashboard-gallery img {
+				display: block; width: 100%; height: auto; border-radius: 6px;
+			}
+			.dashboard-gallery figure { margin: 0; min-width: 0; }
+			.dashboard-gallery figcaption { font-size: 0.9em; margin-top: 0.5rem; }
+			.project-links { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+			.back-link { display: inline-block; margin-top: 2rem; }
+			@media screen and (max-width: 736px) {
+				.dashboard-gallery { grid-template-columns: 1fr; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<!-- HEADER -->
+			<header id="header">
+				<a href="../index.html" class="logo">HNEL</a>
+			</header>
+
+			<!-- NAVIGATION -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">Main</a></li>
+					<li class="active"><a href="../generic.html">Projects</a></li>
+				</ul>
+
+				<ul class="icons alt">
+					<li><a href="https://www.facebook.com/ha.tem.445356" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://instagram.com/ha.tem" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://linkedin.com/in/hatem-el-hadary" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/Hatem207" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- MAIN CONTENT -->
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<span class="date">Tableau Project</span>
+						<h1>HR Analytics<br />Employee Attrition Dashboard</h1>
+					</header>
+
+					<h3>Project Overview</h3>
+					<p>
+						This Tableau dashboard provides a comprehensive analysis of employee demographics,
+						workforce structure, employee attrition, job satisfaction, compensation, career
+						progression, and key HR risk factors. It transforms employee-level HR data into
+						interactive dashboards that help HR teams and business leaders understand workforce
+						trends, identify potential attrition drivers, and support data-driven retention strategies.
+					</p>
+
+					<div class="image main project-detail-hero">
+						<img src="https://raw.githubusercontent.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition/main/HR%20Executive%20Overview.png"
+							alt="HR Executive Overview dashboard" />
+					</div>
+
+					<ul class="project-detail-meta">
+						<li>Tableau</li>
+						<li>Tableau Calculations</li>
+						<li>Data Cleaning</li>
+						<li>Data Analysis</li>
+						<li>KPI Development</li>
+						<li>HR Analytics</li>
+					</ul>
+
+					<h3>Business Problem</h3>
+					<p>
+						Employee turnover can have a significant impact on recruitment costs, productivity,
+						employee experience, and overall business performance. HR departments need to
+						understand <strong>who is leaving, why employees leave, and which workforce
+						characteristics are associated with higher attrition</strong>.
+					</p>
+
+					<h3>Project Objective</h3>
+					<p>
+						Provide an interactive HR analytics solution to monitor employee attrition, analyze
+						workforce characteristics, evaluate compensation and career development, and identify
+						potential employee retention risks.
+					</p>
+
+					<h3>Business Questions</h3>
+					<ul>
+						<li>Who is leaving, and how does attrition vary by department, job role, age, and gender?</li>
+						<li>Which workplace factors (overtime, satisfaction, work-life balance, travel) are associated with attrition?</li>
+						<li>How do compensation, salary hikes, and career progression relate to retention?</li>
+						<li>Which workforce segments carry an elevated attrition risk?</li>
+					</ul>
+
+					<h3>Key KPIs</h3>
+					<ul>
+						<li>Total Employees</li>
+						<li>Total Attrition and Attrition Rate</li>
+						<li>Average Income</li>
+						<li>Average Employee Age and Average Years</li>
+						<li>Average Satisfaction</li>
+						<li>Total Working Years and Years at Company</li>
+					</ul>
+
+					<h3>Dashboard Overview</h3>
+					<p>The project is organized into six dashboard pages, each focused on a different part of the retention story.</p>
+
+					<div class="dashboard-section">
+						<h3>01. HR Executive Overview</h3>
+						<p>
+							Headline KPIs (total employees, total attrition, attrition rate, average income,
+							average age, average satisfaction) alongside attrition broken down by department,
+							age group, job role, and gender, with interactive workforce filters.
+						</p>
+						<div class="tableau-result">
+							<strong>Purpose:</strong> Give leaders a quick snapshot of attrition before they explore the details.
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>02. Employee Profile</h3>
+						<p>
+							Workforce composition by age, job level, department, education field, business
+							travel, and marital status.
+						</p>
+						<div class="tableau-result">
+							<strong>Questions answered:</strong> What does the workforce look like demographically?
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>03. Attrition Drivers</h3>
+						<p>
+							Compares attrition against overtime, job satisfaction, environment satisfaction,
+							work-life balance, job involvement, and relationship satisfaction.
+						</p>
+						<div class="tableau-result">
+							<strong>Questions answered:</strong> Which employee characteristics and workplace factors are associated with turnover?
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>04. Compensation &amp; Career</h3>
+						<p>
+							Income by job role, stock option level, years since last promotion, salary hike
+							vs attrition, and career progression, continued with years at company, total
+							working years, and workforce tenure analysis.
+						</p>
+						<div class="tableau-result">
+							<strong>Questions answered:</strong> How do pay, promotion timing, and experience relate to retention?
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>05. HR Risk Analysis</h3>
+						<p>
+							Cross-dimensional views: Department × Job Role heatmap, Age Band × Overtime,
+							Job Level × Job Satisfaction, and Distance From Home × Attrition.
+						</p>
+						<div class="tableau-result">
+							<strong>Questions answered:</strong> Which workforce segments show elevated attrition risk?
+						</div>
+					</div>
+
+					<div class="dashboard-section">
+						<h3>06. Filters and Interactivity</h3>
+						<p>
+							Filters for department, job role, business travel, overtime, gender, and marital
+							status, plus age group analysis, dynamic cross-filtering, and dashboard navigation.
+						</p>
+					</div>
+
+					<h3>Key Insights</h3>
+					<ul>
+						<li><strong>Segment variation:</strong> Attrition varies significantly across departments and job roles.</li>
+						<li><strong>Workload:</strong> Overtime is an important factor when analyzing attrition.</li>
+						<li><strong>Engagement:</strong> Job satisfaction and job involvement are valuable retention indicators.</li>
+						<li><strong>Pay and growth:</strong> Compensation, salary increases, career progression, and time since last promotion all shape employee experience and retention.</li>
+						<li><strong>Travel and commute:</strong> Business travel level and distance from home show different attrition patterns worth monitoring.</li>
+						<li><strong>Demographics:</strong> Attrition patterns differ across groups such as age and gender.</li>
+						<li><strong>Combined view:</strong> Looking at satisfaction, compensation, workload, and career factors together gives a more complete picture of retention risk.</li>
+					</ul>
+
+					<h3>Business Value</h3>
+					<ul>
+						<li>Monitor overall employee attrition and identify high-risk workforce segments.</li>
+						<li>Understand the major factors associated with turnover.</li>
+						<li>Compare attrition across departments and job roles.</li>
+						<li>Evaluate satisfaction, compensation, and career progression.</li>
+						<li>Support engagement strategies, workforce planning, and data-driven HR decisions.</li>
+					</ul>
+
+					<h3>Dashboard Screenshots</h3>
+					<div class="dashboard-gallery">
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition/main/HR%20Executive%20Overview.png" alt="HR Executive Overview" />
+							<figcaption>HR Executive Overview — KPIs and attrition by department, age group, job role, and gender.</figcaption>
+						</figure>
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition/main/Employee%20Profile.png" alt="Employee Profile" />
+							<figcaption>Employee Profile — workforce demographics and structure.</figcaption>
+						</figure>
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition/main/Attrition%20Drivers.png" alt="Attrition Drivers" />
+							<figcaption>Attrition Drivers — overtime, satisfaction, and work-life balance vs attrition.</figcaption>
+						</figure>
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition/main/Compensation%20%26%20Career%20.png" alt="Compensation and Career" />
+							<figcaption>Compensation &amp; Career — income, stock options, promotions, and salary hikes.</figcaption>
+						</figure>
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition/main/Compensation%20%26%20Career%20continue.png" alt="Compensation and Career continued" />
+							<figcaption>Compensation &amp; Career (continued) — tenure, total working years, and experience.</figcaption>
+						</figure>
+						<figure>
+							<img src="https://raw.githubusercontent.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition/main/HR%20Risk%20Analysis.png" alt="HR Risk Analysis" />
+							<figcaption>HR Risk Analysis — heatmaps highlighting higher-risk workforce segments.</figcaption>
+						</figure>
+					</div>
+
+					<h3>Skills Demonstrated</h3>
+					<ul>
+						<li>Interactive Dashboard Design</li>
+						<li>KPI Development and Tableau Calculations</li>
+						<li>Data Cleaning and Analysis</li>
+						<li>Data Visualization and Chart Selection</li>
+						<li>HR Analytics and Business Insight Communication</li>
+					</ul>
+
+					<h3>Project Outcome</h3>
+					<p>
+						The project turns employee-level HR data into a six-page interactive Tableau
+						dashboard that helps HR teams and business leaders see who is leaving, understand
+						the factors linked to attrition, and focus retention efforts on the segments that
+						need them most.
+					</p>
+
+					<ul class="actions special project-links">
+						<li><a href="https://github.com/Hatem207/Tableau-HR-Analytics-Employee-Attrition" target="_blank" rel="noopener noreferrer" class="button">View on GitHub</a></li>
+					</ul>
+
+					<a href="../generic.html#tableau" class="button back-link">⬅ Back to Projects</a>
+				</section>
+			</div>
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Shebin Elkom, menofia</p>
+					</section>
+
+					<section>
+						<h3>Phone</h3>
+						<p><a href="tel:+201099430032">(+20) 01099430032</a></p>
+					</section>
+
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:hatemelhadry7@gmail.com">hatemelhadry7@gmail.com</a></p>
+					</section>
+
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://www.facebook.com/ha.tem.445356" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://instagram.com/ha.tem" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://linkedin.com/in/hatem-el-hadary" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Hatem207" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+			<div id="copyright">
+				<ul><li>&copy; HNEL</li></ul>
+			</div>
+
+		</div>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

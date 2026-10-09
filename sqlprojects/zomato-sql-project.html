@@ -1,0 +1,1427 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Zomato Food Delivery SQL Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<style>
+
+			/* =========================
+			   Project Image
+			========================= */
+
+			.project-detail-hero {
+				width: 100%;
+				max-width: 100%;
+				box-sizing: border-box;
+				overflow: hidden;
+				margin: 0 0 2rem 0;
+			}
+
+			.project-detail-hero img {
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+				object-fit: contain;
+				border-radius: 6px;
+				margin: 0 auto 2rem auto;
+				box-sizing: border-box;
+			}
+
+
+			/* =========================
+			   Project Meta Tags
+			========================= */
+
+			.project-detail-meta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em;
+				list-style: none;
+				padding: 0;
+				margin: 0 0 2rem 0;
+			}
+
+			.project-detail-meta li {
+				font-size: 0.78em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.03em;
+				padding: 0.4em 0.9em;
+				border-radius: 100px;
+				border: 1px solid rgba(242,200,17,0.6);
+				color: rgba(0,0,0,0.75);
+			}
+
+
+			/* =========================
+			   SQL Code Blocks
+			========================= */
+
+			.sql-block {
+				width: 100%;
+				max-width: 100%;
+				box-sizing: border-box;
+				overflow-x: auto;
+				background: #f5f5f5;
+				padding: 1.25rem;
+				border-radius: 6px;
+				margin: 1.5rem 0;
+			}
+
+			.sql-block pre {
+				margin: 0;
+				white-space: pre;
+			}
+
+			.sql-block code {
+				font-family: monospace;
+				font-size: 0.88em;
+			}
+
+
+			/* =========================
+			   SQL Question Sections
+			========================= */
+
+			.sql-question {
+				margin-top: 2.5rem;
+			}
+
+			.sql-question h3 {
+				margin-bottom: 0.5rem;
+			}
+
+
+			/* =========================
+			   Result / Concept Box
+			========================= */
+
+			.sql-result {
+				background: rgba(242,200,17,0.08);
+				border-left: 4px solid rgba(242,200,17,0.8);
+				padding: 1rem 1.25rem;
+				margin: 1rem 0 2rem 0;
+				box-sizing: border-box;
+			}
+
+
+			/* =========================
+			   Database Schema
+			========================= */
+
+			.database-schema {
+				width: 100%;
+				max-width: 100%;
+				overflow-x: auto;
+				box-sizing: border-box;
+				margin: 1.5rem 0 2rem 0;
+			}
+
+			.database-schema table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+
+			.database-schema th,
+			.database-schema td {
+				padding: 0.75rem;
+				text-align: left;
+			}
+
+
+			/* =========================
+			   Back Button
+			========================= */
+
+			.back-link {
+				display: inline-block;
+				margin-top: 2rem;
+			}
+
+		</style>
+	</head>
+
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+
+			<!-- =========================
+			     HEADER
+			========================= -->
+
+			<header id="header">
+				<a href="../index.html" class="logo">HNEL</a>
+			</header>
+
+
+			<!-- =========================
+			     NAVIGATION
+			========================= -->
+
+			<nav id="nav">
+
+				<ul class="links">
+					<li>
+						<a href="../index.html">Main</a>
+					</li>
+
+					<li class="active">
+						<a href="../generic.html">Projects</a>
+					</li>
+				</ul>
+
+
+				<ul class="icons alt">
+
+					<li>
+						<a href="https://www.facebook.com/ha.tem.445356"
+						   target="_blank"
+						   class="icon brands alt fa-facebook-f">
+							<span class="label">Facebook</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://instagram.com/ha.tem"
+						   target="_blank"
+						   class="icon brands alt fa-instagram">
+							<span class="label">Instagram</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://linkedin.com/in/hatem-el-hadary"
+						   target="_blank"
+						   class="icon brands alt fa-linkedin-in">
+							<span class="label">LinkedIn</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://github.com/Hatem207"
+						   target="_blank"
+						   class="icon brands alt fa-github">
+							<span class="label">GitHub</span>
+						</a>
+					</li>
+
+				</ul>
+
+			</nav>
+
+
+			<!-- =========================
+			     MAIN CONTENT
+			========================= -->
+
+			<div id="main">
+
+				<section class="post">
+
+
+					<!-- =========================
+					     TITLE
+					========================= -->
+
+					<header class="major">
+
+						<span class="date">
+							SQL Project
+						</span>
+
+						<h1>
+							Zomato Food Delivery<br />
+							SQL Project
+						</h1>
+
+					</header>
+
+
+					<!-- =========================
+					     OVERVIEW
+					========================= -->
+
+					<h3>Project Overview</h3>
+
+					<p>
+						This SQL project focuses on analyzing a food delivery
+						platform (Zomato-style) using PostgreSQL. The project
+						covers database design, joins, aggregations, window
+						functions, CTEs, time-based analysis, customer
+						segmentation, and rider performance analytics across
+						20 business questions.
+					</p>
+
+
+					<!-- =========================
+					     PROJECT IMAGE
+					     Put your image path here
+					========================= -->
+
+					<div class="image main project-detail-hero">
+
+						<img
+							src="../images/zomatoERD.png"
+							alt="Zomato Food Delivery SQL Project"
+						/>
+
+					</div>
+
+
+					<!-- =========================
+					     TECHNOLOGIES
+					========================= -->
+
+					<ul class="project-detail-meta">
+
+						<li>PostgreSQL</li>
+						<li>SQL</li>
+						<li>Database Design</li>
+						<li>Joins</li>
+						<li>CTE</li>
+						<li>Window Functions</li>
+						<li>Data Analysis</li>
+
+					</ul>
+
+
+					<!-- =========================
+					     BUSINESS / PROJECT PROBLEM
+					========================= -->
+
+					<h3>Project Objective</h3>
+
+					<p>
+						The objective of this project is to build a relational
+						database for an online food delivery business and use
+						SQL to answer real business questions about customers,
+						restaurants, orders, and delivery riders — including
+						revenue ranking, growth trends, cancellation rates, and
+						rider efficiency.
+					</p>
+
+
+					<!-- =========================
+					     DATABASE STRUCTURE
+					========================= -->
+
+					<h3>Database Structure</h3>
+
+					<p>
+						The database consists of five main tables that represent
+						the different components of the food delivery platform.
+					</p>
+
+
+					<div class="database-schema">
+
+						<table>
+
+							<thead>
+								<tr>
+									<th>Table</th>
+									<th>Main Purpose</th>
+								</tr>
+							</thead>
+
+							<tbody>
+
+								<tr>
+									<td><strong>customers</strong></td>
+									<td>Stores customer profiles, location, and preferences.</td>
+								</tr>
+
+								<tr>
+									<td><strong>restaurants</strong></td>
+									<td>Stores restaurant details, cuisine type, and rating.</td>
+								</tr>
+
+								<tr>
+									<td><strong>orders</strong></td>
+									<td>Tracks each order, amount, status, and payment mode.</td>
+								</tr>
+
+								<tr>
+									<td><strong>delivery_persons</strong></td>
+									<td>Stores rider details, vehicle type, and ratings.</td>
+								</tr>
+
+								<tr>
+									<td><strong>deliveries</strong></td>
+									<td>Tracks delivery status, distance, time, and fees.</td>
+								</tr>
+
+							</tbody>
+
+						</table>
+
+					</div>
+
+
+					<!-- =========================
+					     SCHEMA CREATION
+					========================= -->
+
+					<h3>Schema Creation</h3>
+
+
+					<div class="sql-question">
+
+						<h3>Tables &amp; Relationships</h3>
+
+						<p>
+							Creating the tables with primary keys and foreign
+							key relationships between orders, customers,
+							restaurants, deliveries, and riders.
+						</p>
+
+						<div class="sql-block">
+<pre><code>CREATE TABLE customers (
+    customer_id INT,
+    name VARCHAR(50),
+    email VARCHAR(50),
+    phone VARCHAR(20),
+    location VARCHAR(100),
+    signup_date DATE,
+    is_premium BOOLEAN,
+    preferred_cuisine VARCHAR(50),
+    total_orders INT,
+    average_rating DECIMAL(3,2),
+    PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE restaurants (
+    restaurant_id INT,
+    name VARCHAR(100),
+    cuisine_type VARCHAR(50),
+    location VARCHAR(100),
+    owner_name VARCHAR(100),
+    average_delivery_time INT,
+    contact_number VARCHAR(20),
+    rating DECIMAL(3,2),
+    total_orders INT,
+    is_active BOOLEAN,
+    PRIMARY KEY (restaurant_id)
+);
+
+CREATE TABLE delivery_persons (
+    delivery_person_id INT,
+    name VARCHAR(50),
+    contact_number VARCHAR(20),
+    vehicle_type VARCHAR(30),
+    total_deliveries INT,
+    average_rating DECIMAL(3,2),
+    location VARCHAR(150),
+    PRIMARY KEY (delivery_person_id)
+);
+
+CREATE TABLE orders (
+    order_id INT,
+    customer_id INT,
+    restaurant_id INT,
+    order_date TIMESTAMP,
+    delivery_time TIMESTAMP,
+    status VARCHAR(20),
+    total_amount DECIMAL(10,2),
+    payment_mode VARCHAR(20),
+    discount_applied DECIMAL(10,2),
+    feedback_rating DECIMAL(3,2),
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (restaurant_id) REFERENCES restaurants(restaurant_id)
+);
+
+CREATE TABLE deliveries (
+    delivery_id INT,
+    order_id INT,
+    delivery_person_id INT,
+    delivery_status VARCHAR(15),
+    distance FLOAT,
+    delivery_time INT,
+    estimated_time INT,
+    delivery_fee DECIMAL(10,2),
+    vehicle_type VARCHAR(30),
+    PRIMARY KEY (delivery_id),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (delivery_person_id)
+        REFERENCES delivery_persons(delivery_person_id)
+);</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							CREATE TABLE, Primary Keys, Foreign Keys
+						</div>
+
+					</div>
+
+
+					<!-- =========================
+					     BASIC ANALYSIS
+					========================= -->
+
+					<h3>Customer &amp; Order Analysis</h3>
+
+
+					<div class="sql-question">
+
+						<h3>01. Orders Made by a Specific Customer</h3>
+
+						<p>
+							Count how many orders "Krish Basak" placed
+							during the last year.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    c.customer_id,
+    c.name,
+    COUNT(DISTINCT order_id) AS total
+FROM orders o
+JOIN customers c
+    ON o.customer_id = c.customer_id
+WHERE c.name = 'Krish Basak'
+  AND order_date >= CURRENT_DATE - INTERVAL '1 year'
+GROUP BY 1,2
+ORDER BY 3 DESC;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							JOIN, COUNT DISTINCT, INTERVAL, GROUP BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>02. Peak Order Time Slots</h3>
+
+						<p>
+							Identify the time slots during which the most
+							orders are placed, based on 2-hour intervals.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    FLOOR(EXTRACT(HOUR FROM order_date) / 2) * 2 AS start_hour,
+    COUNT(*) AS total_orders
+FROM orders
+GROUP BY 1
+ORDER BY total_orders DESC;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							EXTRACT(), FLOOR(), GROUP BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>03. Average Order Value per Customer</h3>
+
+						<p>
+							Find the AOV for customers who have placed
+							more than 7 orders.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    c.name AS customer_name,
+    AVG(o.total_amount) AS aov
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.name
+HAVING COUNT(DISTINCT o.order_id) > 7;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							AVG(), GROUP BY, HAVING
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>04. High Value Customers</h3>
+
+						<p>
+							List the customers who have spent more than
+							20,000 in total on food orders.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    c.name AS customer_name,
+    SUM(o.total_amount) AS total_amount
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.name
+HAVING SUM(o.total_amount) > 20000;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							SUM(), GROUP BY, HAVING
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>05. Orders Placed but Not Delivered</h3>
+
+						<p>
+							Return each restaurant name, city, and the number
+							of orders that were never delivered.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    r.name AS restaurant_name,
+    r.location AS city,
+    COUNT(DISTINCT o.order_id) AS not_delivered_orders
+FROM orders o
+JOIN restaurants r
+    ON o.restaurant_id = r.restaurant_id
+LEFT JOIN deliveries d
+    ON o.order_id = d.order_id
+WHERE d.delivery_status IS NULL
+   OR d.delivery_status &lt;&gt; 'Delivered'
+GROUP BY r.restaurant_id, r.name, r.location
+ORDER BY not_delivered_orders DESC;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							LEFT JOIN, NULL Handling, COUNT(DISTINCT)
+						</div>
+
+					</div>
+
+
+					<!-- =========================
+					     RESTAURANT ANALYSIS
+					========================= -->
+
+					<h3>Restaurant Performance</h3>
+
+
+					<div class="sql-question">
+
+						<h3>06. Restaurant Revenue Ranking by City</h3>
+
+						<p>
+							Rank restaurants by their total revenue from the
+							last year within their own city.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    r.name AS restaurant_name,
+    r.location AS city,
+    SUM(o.total_amount) AS total_revenue,
+    RANK() OVER (
+        PARTITION BY r.location
+        ORDER BY SUM(o.total_amount) DESC
+    ) AS city_rank
+FROM restaurants r
+JOIN orders o
+    ON r.restaurant_id = o.restaurant_id
+WHERE o.order_date >= CURRENT_DATE - INTERVAL '1 year'
+GROUP BY r.restaurant_id, r.name, r.location
+ORDER BY r.location, city_rank;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							RANK(), PARTITION BY, Window Functions
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>07. Most Popular Restaurant in Each City</h3>
+
+						<p>
+							Return the city, restaurant name, and number of
+							orders for the top restaurant per city.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT *
+FROM (
+    SELECT
+        r.location AS city,
+        r.name AS restaurant_name,
+        COUNT(o.order_id) AS total_orders,
+        RANK() OVER (
+            PARTITION BY r.location
+            ORDER BY COUNT(o.order_id) DESC
+        ) AS rank
+    FROM restaurants r
+    JOIN orders o
+        ON r.restaurant_id = o.restaurant_id
+    GROUP BY r.location, r.name
+) x
+WHERE rank = 1;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							Subquery, RANK(), PARTITION BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>08. Churned Customers</h3>
+
+						<p>
+							Find customers who placed orders in 2023
+							but stopped ordering in 2024.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    c.customer_id,
+    c.name
+FROM customers c
+JOIN orders o
+    ON o.customer_id = c.customer_id
+GROUP BY c.customer_id, c.name
+HAVING
+    COUNT(CASE
+        WHEN EXTRACT(YEAR FROM o.order_date) = 2023
+        THEN 1
+    END) > 0
+AND
+    COUNT(CASE
+        WHEN EXTRACT(YEAR FROM o.order_date) = 2024
+        THEN 1
+    END) = 0;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							Conditional Aggregation, CASE, HAVING
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>09. Cancellation Rate Comparison</h3>
+
+						<p>
+							Compare the order cancellation rate for each
+							restaurant between the current year and the
+							previous year.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    r.name,
+    -- Current Year
+    COUNT(
+        CASE
+            WHEN EXTRACT(YEAR FROM o.order_date)
+                 = EXTRACT(YEAR FROM CURRENT_DATE)
+             AND o.status = 'Cancelled'
+            THEN 1
+        END
+    ) * 100.0
+    /
+    COUNT(
+        CASE
+            WHEN EXTRACT(YEAR FROM o.order_date)
+                 = EXTRACT(YEAR FROM CURRENT_DATE)
+            THEN 1
+        END
+    ) AS current_year_rate,
+    -- Previous Year
+    COUNT(
+        CASE
+            WHEN EXTRACT(YEAR FROM o.order_date)
+                 = EXTRACT(YEAR FROM CURRENT_DATE) - 1
+             AND o.status = 'Cancelled'
+            THEN 1
+        END
+    ) * 100.0
+    /
+    COUNT(
+        CASE
+            WHEN EXTRACT(YEAR FROM o.order_date)
+                 = EXTRACT(YEAR FROM CURRENT_DATE) - 1
+            THEN 1
+        END
+    ) AS previous_year_rate
+FROM restaurants r
+JOIN orders o
+    ON r.restaurant_id = o.restaurant_id
+GROUP BY r.name;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							CASE, Conditional Aggregation, Ratio Calculation
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>10. Rider Average Delivery Time</h3>
+
+						<p>
+							Determine each rider's average delivery time.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    dp.name,
+    AVG(d.delivery_time) AS average_delivery_time
+FROM delivery_persons dp
+JOIN deliveries d
+    ON d.delivery_person_id = dp.delivery_person_id
+GROUP BY dp.name;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							JOIN, AVG(), GROUP BY
+						</div>
+
+					</div>
+
+
+					<!-- =========================
+					     ADVANCED SQL
+					========================= -->
+
+					<h3>Advanced SQL Operations</h3>
+
+
+					<div class="sql-question">
+
+						<h3>11. Monthly Restaurant Growth Ratio</h3>
+
+						<p>
+							Calculate each restaurant's month-over-month growth
+							ratio based on delivered orders.
+						</p>
+
+						<div class="sql-block">
+<pre><code>WITH monthly_orders AS (
+    SELECT
+        r.name AS restaurant_name,
+        DATE_TRUNC('month', o.order_date) AS month,
+        COUNT(o.order_id) AS delivered_orders
+    FROM restaurants r
+    JOIN orders o
+        ON r.restaurant_id = o.restaurant_id
+    WHERE o.status = 'Delivered'
+    GROUP BY r.name, DATE_TRUNC('month', o.order_date)
+)
+SELECT
+    restaurant_name,
+    month,
+    delivered_orders,
+    ROUND(
+        (
+            delivered_orders
+            - LAG(delivered_orders) OVER (
+                PARTITION BY restaurant_name
+                ORDER BY month
+            )
+        ) * 100.0
+        /
+        NULLIF(
+            LAG(delivered_orders) OVER (
+                PARTITION BY restaurant_name
+                ORDER BY month
+            ),
+            0
+        ),
+        2
+    ) AS growth_ratio
+FROM monthly_orders
+ORDER BY restaurant_name, month;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							CTE, LAG(), DATE_TRUNC(), NULLIF()
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>12. Customer Segmentation (Gold / Silver)</h3>
+
+						<p>
+							Segment customers into Gold or Silver based on
+							whether their total spending exceeds the average
+							order value, then return total orders and revenue
+							per segment.
+						</p>
+
+						<div class="sql-block">
+<pre><code>WITH customer_spending AS (
+    SELECT
+        c.customer_id,
+        SUM(o.total_amount) AS total_spending,
+        COUNT(o.order_id) AS total_orders
+    FROM customers c
+    JOIN orders o
+        ON c.customer_id = o.customer_id
+    GROUP BY c.customer_id
+)
+SELECT
+    CASE
+        WHEN total_spending > (
+            SELECT AVG(total_amount)
+            FROM orders
+        )
+        THEN 'Gold'
+        ELSE 'Silver'
+    END AS customer_segment,
+    COUNT(*) AS total_customers,
+    SUM(total_orders) AS total_orders,
+    SUM(total_spending) AS total_revenue
+FROM customer_spending
+GROUP BY
+    CASE
+        WHEN total_spending > (
+            SELECT AVG(total_amount)
+            FROM orders
+        )
+        THEN 'Gold'
+        ELSE 'Silver'
+    END;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							CTE, CASE, Scalar Subquery, GROUP BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>13. Rider Monthly Earnings</h3>
+
+						<p>
+							Calculate each rider's total monthly earnings,
+							assuming they earn 8% of the order amount.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    dp.name AS rider_name,
+    DATE_TRUNC('month', o.order_date) AS month,
+    SUM(o.total_amount * 0.08) AS monthly_earnings
+FROM delivery_persons dp
+JOIN deliveries d
+    ON dp.delivery_person_id = d.delivery_person_id
+JOIN orders o
+    ON d.order_id = o.order_id
+GROUP BY
+    dp.name,
+    DATE_TRUNC('month', o.order_date)
+ORDER BY
+    dp.name,
+    month;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							Multiple Joins, DATE_TRUNC(), SUM()
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>14. Rider Ratings Analysis</h3>
+
+						<p>
+							Count the 5-star, 4-star, and 3-star ratings each
+							rider receives based on delivery duration:
+							under 15 minutes → 5 stars, 15–20 minutes →
+							4 stars, over 20 minutes → 3 stars.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    dp.name AS rider_name,
+    COUNT(
+        CASE
+            WHEN EXTRACT(EPOCH FROM (o.delivery_time - o.order_date)) / 60 &lt; 15
+            THEN 1
+        END
+    ) AS five_star,
+    COUNT(
+        CASE
+            WHEN EXTRACT(EPOCH FROM (o.delivery_time - o.order_date)) / 60
+                 BETWEEN 15 AND 20
+            THEN 1
+        END
+    ) AS four_star,
+    COUNT(
+        CASE
+            WHEN EXTRACT(EPOCH FROM (o.delivery_time - o.order_date)) / 60 > 20
+            THEN 1
+        END
+    ) AS three_star
+FROM delivery_persons dp
+JOIN deliveries d
+    ON dp.delivery_person_id = d.delivery_person_id
+JOIN orders o
+    ON d.order_id = o.order_id
+GROUP BY dp.name
+ORDER BY dp.name;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							EXTRACT(EPOCH), CASE, Conditional Aggregation
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>15. Order Frequency by Day of Week</h3>
+
+						<p>
+							Analyze order frequency per day of the week and
+							identify the peak day for each restaurant.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    r.name AS restaurant_name,
+    TO_CHAR(o.order_date, 'Day') AS day_name,
+    COUNT(o.order_id) AS total_orders,
+    RANK() OVER (
+        PARTITION BY r.name
+        ORDER BY COUNT(o.order_id) DESC
+    ) AS rank
+FROM restaurants r
+JOIN orders o
+    ON r.restaurant_id = o.restaurant_id
+GROUP BY r.name, TO_CHAR(o.order_date, 'Day');</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							TO_CHAR(), RANK(), PARTITION BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>16. Customer Lifetime Value (CLV)</h3>
+
+						<p>
+							Calculate the total revenue generated by each
+							customer across all their orders.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    c.customer_id,
+    c.name AS customer_name,
+    COUNT(o.order_id) AS total_orders,
+    SUM(o.total_amount) AS customer_lifetime_value
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY
+    c.customer_id,
+    c.name
+ORDER BY customer_lifetime_value DESC;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							JOIN, SUM(), COUNT(), ORDER BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>17. Monthly Sales Trends</h3>
+
+						<p>
+							Identify sales trends by comparing each month's
+							total sales to the previous month.
+						</p>
+
+						<div class="sql-block">
+<pre><code>WITH monthly_sales AS (
+    SELECT
+        DATE_TRUNC('month', order_date) AS month,
+        SUM(total_amount) AS total_sales
+    FROM orders
+    GROUP BY DATE_TRUNC('month', order_date)
+)
+SELECT
+    month,
+    TO_CHAR(month, 'Month') AS month_name,
+    total_sales,
+    LAG(total_sales) OVER (
+        ORDER BY month
+    ) AS previous_month_sales,
+    total_sales
+    - LAG(total_sales) OVER (
+        ORDER BY month
+    ) AS sales_difference,
+    ROUND(
+        (
+            total_sales
+            - LAG(total_sales) OVER (
+                ORDER BY month
+            )
+        ) * 100.0
+        /
+        NULLIF(
+            LAG(total_sales) OVER (
+                ORDER BY month
+            ),
+            0
+        ),
+        2
+    ) AS growth_percentage
+FROM monthly_sales
+ORDER BY month;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							CTE, LAG(), Growth %, NULLIF()
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>18. Rider Efficiency</h3>
+
+						<p>
+							Evaluate rider efficiency by ranking average
+							delivery times from lowest to highest.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    dp.delivery_person_id,
+    dp.name,
+    AVG(d.delivery_time) AS average_delivery_time,
+    RANK() OVER (
+        ORDER BY AVG(d.delivery_time)
+    ) AS efficiency_rank
+FROM delivery_persons dp
+JOIN deliveries d
+    ON dp.delivery_person_id = d.delivery_person_id
+GROUP BY
+    dp.delivery_person_id,
+    dp.name
+ORDER BY average_delivery_time;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							AVG(), RANK(), Window Functions
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>19. Monthly Restaurant Order Trends</h3>
+
+						<p>
+							Track the popularity of each restaurant over time
+							and identify the months with the highest demand.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    r.name,
+    DATE_TRUNC('month', order_date) AS month,
+    COUNT(o.order_id) AS total_orders,
+    RANK() OVER (
+        PARTITION BY r.name
+        ORDER BY COUNT(o.order_id) DESC
+    ) AS rank
+FROM orders o
+JOIN restaurants r
+    ON o.restaurant_id = r.restaurant_id
+GROUP BY r.name, DATE_TRUNC('month', order_date);</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							DATE_TRUNC(), RANK(), PARTITION BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>20. City Revenue Ranking (2023)</h3>
+
+						<p>
+							Rank each city based on the total revenue
+							generated during 2023.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT 
+    r.location,
+    SUM(o.total_amount) AS total_revenue,
+    RANK() OVER (
+        ORDER BY SUM(o.total_amount) DESC
+    ) AS rank
+FROM orders o
+JOIN restaurants r
+    ON o.restaurant_id = r.restaurant_id
+WHERE EXTRACT(YEAR FROM o.order_date) = 2023
+GROUP BY r.location
+ORDER BY rank;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							EXTRACT(), SUM(), RANK(), GROUP BY
+						</div>
+
+					</div>
+
+
+					<!-- =========================
+					     SQL SKILLS
+					========================= -->
+
+					<h3>SQL Skills Demonstrated</h3>
+
+					<ul>
+
+						<li>Database Design</li>
+
+						<li>Primary &amp; Foreign Keys</li>
+
+						<li>SELECT &amp; Filtering</li>
+
+						<li>GROUP BY &amp; HAVING</li>
+
+						<li>Aggregate Functions</li>
+
+						<li>INNER JOIN</li>
+
+						<li>LEFT JOIN</li>
+
+						<li>Subqueries</li>
+
+						<li>CTEs (WITH Clause)</li>
+
+						<li>Window Functions (RANK, LAG)</li>
+
+						<li>Conditional Aggregation (CASE)</li>
+
+						<li>Date &amp; Time Analysis</li>
+
+						<li>NULLIF() &amp; Safe Division</li>
+
+						<li>Business KPIs (AOV, CLV, Growth Rate)</li>
+
+					</ul>
+
+
+					<!-- =========================
+					     PROJECT OUTCOME
+					========================= -->
+
+					<h3>Project Outcome</h3>
+
+					<p>
+						This project demonstrates the ability to model a food
+						delivery business in a relational database and translate
+						business questions into analytical SQL. It covers
+						customer behaviour, restaurant revenue and growth,
+						cancellation trends, and rider performance — combining
+						joins, aggregation, CTEs, and window functions into a
+						complete analytics workflow.
+					</p>
+
+
+					<!-- =========================
+					     GITHUB
+					========================= -->
+
+					<ul class="actions special">
+
+						<li>
+							<a
+								href="https://github.com/Hatem207/SQL-Food-Delivery-Business"
+								target="_blank"
+								class="button">
+								GitHub
+							</a>
+						</li>
+
+					</ul>
+
+
+					<a
+						href="../generic.html#sql"
+						class="button back-link">
+						⬅ Back to Projects
+					</a>
+
+
+				</section>
+
+			</div>
+
+
+			<!-- =========================
+			     FOOTER
+			========================= -->
+
+			<footer id="footer">
+
+				<section class="split contact">
+
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Shebin Elkom, menofia</p>
+					</section>
+
+					<section>
+						<h3>Phone</h3>
+						<p>
+							<a href="tel:+201099430032">
+								(+20) 01099430032
+							</a>
+						</p>
+					</section>
+
+					<section>
+						<h3>Email</h3>
+						<p>
+							<a href="mailto:hatemelhadry7@gmail.com">
+								hatemelhadry7@gmail.com
+							</a>
+						</p>
+					</section>
+
+					<section>
+
+						<h3>Social</h3>
+
+						<ul class="icons alt">
+
+							<li>
+								<a
+									href="https://www.facebook.com/ha.tem.445356"
+									target="_blank"
+									class="icon brands alt fa-facebook-f">
+									<span class="label">Facebook</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="https://instagram.com/ha.tem"
+									target="_blank"
+									class="icon brands alt fa-instagram">
+									<span class="label">Instagram</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="https://linkedin.com/in/hatem-el-hadary"
+									target="_blank"
+									class="icon brands alt fa-linkedin-in">
+									<span class="label">LinkedIn</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="https://github.com/Hatem207"
+									target="_blank"
+									class="icon brands alt fa-github">
+									<span class="label">GitHub</span>
+								</a>
+							</li>
+
+						</ul>
+
+					</section>
+
+				</section>
+
+			</footer>
+
+
+			<div id="copyright">
+
+				<ul>
+					<li>&copy; HNEL</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

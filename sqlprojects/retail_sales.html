@@ -1,0 +1,552 @@
+```html
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Retail Sales SQL Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<style>
+			.project-detail-meta{
+				display:flex;
+				flex-wrap:wrap;
+				gap:0.6em;
+				list-style:none;
+				padding:0;
+				margin:0 0 2rem 0;
+			}
+
+			.project-detail-meta li{
+				font-size:0.78em;
+				font-weight:700;
+				text-transform:uppercase;
+				letter-spacing:0.03em;
+				padding:0.4em 0.9em;
+				border-radius:100px;
+				border:1px solid rgba(242,200,17,0.6);
+				color:rgba(0,0,0,0.75);
+			}
+
+			.sql-block{
+				background:#f5f5f5;
+				padding:1.5rem;
+				border-radius:6px;
+				overflow-x:auto;
+				margin:1.5rem 0;
+			}
+
+			.sql-block pre{
+				margin:0;
+			}
+
+			.sql-block code{
+				font-family:monospace;
+				font-size:0.9em;
+			}
+
+			.sql-question{
+				margin-top:2.5rem;
+			}
+
+			.sql-question h3{
+				margin-bottom:0.5rem;
+			}
+
+			.sql-result{
+				background:rgba(242,200,17,0.08);
+				border-left:4px solid rgba(242,200,17,0.8);
+				padding:1rem 1.25rem;
+				margin:1rem 0 2rem 0;
+			}
+
+			.back-link{
+				display:inline-block;
+				margin-top:2rem;
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<header id="header">
+				<a href="../index.html" class="logo">HNEL</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">Main</a></li>
+					<li class="active"><a href="../generic.html">Projects</a></li>
+				</ul>
+
+				<ul class="icons alt">
+					<li><a href="https://www.facebook.com/ha.tem.445356" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://instagram.com/ha.tem" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://linkedin.com/in/hatem-el-hadary" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/Hatem207" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+
+			<div id="main">
+
+				<section class="post">
+
+					<header class="major">
+						<span class="date">SQL Project</span>
+						<h1>Retail Sales<br />SQL Analysis</h1>
+					</header>
+
+
+					<h3>Project Overview</h3>
+
+					<p>
+						This SQL project analyzes retail sales data to explore sales performance,
+						customer behavior, product categories, and purchasing patterns.
+						The analysis was performed using SQL queries to clean, explore,
+						and extract meaningful insights from the dataset.
+					</p>
+
+
+					<h3>Database Structure</h3>
+
+					<p>
+						The project uses a retail sales table containing transaction,
+						customer, product, and sales-related information.
+					</p>
+
+					<div class="sql-result">
+						<strong>Table:</strong> retail_sales
+						<br><br>
+
+						<strong>Main Columns:</strong><br>
+						transactions_id &nbsp; | &nbsp;
+						sale_date &nbsp; | &nbsp;
+						sale_time &nbsp; | &nbsp;
+						customer_id &nbsp; | &nbsp;
+						gender &nbsp; | &nbsp;
+						age &nbsp; | &nbsp;
+						category &nbsp; | &nbsp;
+						quantity &nbsp; | &nbsp;
+						price_per_unit &nbsp; | &nbsp;
+						cogs &nbsp; | &nbsp;
+						total_sale
+					</div>
+
+
+					<ul class="project-detail-meta">
+						<li>MySQL</li>
+						<li>SQL</li>
+						<li>Data Cleaning</li>
+						<li>Data Analysis</li>
+						<li>Aggregations</li>
+						<li>Window Functions</li>
+					</ul>
+
+
+					<h3>Data Cleaning</h3>
+
+					<p>
+						The dataset was checked for missing values in important fields
+						before performing the analysis.
+					</p>
+
+					<div class="sql-block">
+<pre><code>SELECT *
+FROM retail_sales
+WHERE transactions_id IS NULL
+   OR sale_date IS NULL
+   OR sale_time IS NULL
+   OR gender IS NULL
+   OR category IS NULL
+   OR quantity IS NULL
+   OR cogs IS NULL
+   OR total_sale IS NULL;</code></pre>
+					</div>
+
+
+					<h3>SQL Analysis</h3>
+
+
+					<div class="sql-question">
+
+						<h3>01. Total Number of Sales</h3>
+
+						<p>
+							How many transactions are recorded in the dataset?
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT COUNT(*) AS total_sales
+FROM retail_sales;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							COUNT(), SELECT
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>02. Sales by Category</h3>
+
+						<p>
+							What is the total sales amount for each product category?
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    category,
+    SUM(total_sale) AS total_sales
+FROM retail_sales
+GROUP BY category
+ORDER BY total_sales DESC;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							SUM(), GROUP BY, ORDER BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>03. Average Customer Age</h3>
+
+						<p>
+							What is the average age of customers purchasing from the
+							Beauty category?
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    AVG(age) AS average_age
+FROM retail_sales
+WHERE category = 'Beauty';</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							AVG(), WHERE
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>04. High-Value Transactions</h3>
+
+						<p>
+							Identify transactions where the total sale exceeded 1000.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT *
+FROM retail_sales
+WHERE total_sale &gt; 1000;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							Filtering, Comparison Operators
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>05. Top 5 Customers</h3>
+
+						<p>
+							Which customers generated the highest total sales?
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    customer_id,
+    SUM(total_sale) AS total_sales
+FROM retail_sales
+GROUP BY customer_id
+ORDER BY total_sales DESC
+LIMIT 5;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							SUM(), GROUP BY, ORDER BY, LIMIT
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>06. Unique Customers by Category</h3>
+
+						<p>
+							How many unique customers purchased from each category?
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    category,
+    COUNT(DISTINCT customer_id) AS unique_customers
+FROM retail_sales
+GROUP BY category;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							COUNT(), DISTINCT, GROUP BY
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>07. Best-Selling Month</h3>
+
+						<p>
+							Identify the month with the highest average sales
+							for each year.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT *
+FROM (
+    SELECT
+        EXTRACT(YEAR FROM sale_date) AS year,
+        EXTRACT(MONTH FROM sale_date) AS month,
+        AVG(total_sale) AS avg_sale,
+
+        RANK() OVER (
+            PARTITION BY EXTRACT(YEAR FROM sale_date)
+            ORDER BY AVG(total_sale) DESC
+        ) AS rank
+
+    FROM retail_sales
+    GROUP BY 1, 2
+) AS t1
+
+WHERE rank = 1;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							Subqueries, EXTRACT(), AVG(), RANK(),
+							Window Functions
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>08. Sales by Gender and Category</h3>
+
+						<p>
+							Compare the number of sales across genders and product categories.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    gender,
+    category,
+    COUNT(transactions_id) AS sales
+FROM retail_sales
+GROUP BY gender, category
+ORDER BY category, sales DESC;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							COUNT(), GROUP BY, Multiple Dimensions
+						</div>
+
+					</div>
+
+
+					<div class="sql-question">
+
+						<h3>09. Sales by Time Shift</h3>
+
+						<p>
+							Classify transactions into Morning, Afternoon,
+							and Evening shifts.
+						</p>
+
+						<div class="sql-block">
+<pre><code>SELECT
+    CASE
+        WHEN sale_time &lt;= '11:59:59'
+            THEN 'Morning'
+
+        WHEN sale_time &lt;= '17:00:00'
+            THEN 'Afternoon'
+
+        ELSE 'Evening'
+    END AS shift,
+
+    COUNT(*) AS number_of_orders
+
+FROM retail_sales
+GROUP BY shift;</code></pre>
+						</div>
+
+						<div class="sql-result">
+							<strong>SQL Concepts:</strong>
+							CASE WHEN, Time Analysis, GROUP BY
+						</div>
+
+					</div>
+
+
+					<h3>Key SQL Skills</h3>
+
+					<ul>
+						<li>Data Cleaning</li>
+						<li>Filtering with WHERE</li>
+						<li>Aggregate Functions</li>
+						<li>GROUP BY</li>
+						<li>ORDER BY</li>
+						<li>DISTINCT</li>
+						<li>CASE WHEN</li>
+						<li>Subqueries</li>
+						<li>Window Functions</li>
+						<li>RANK()</li>
+						<li>Date and Time Analysis</li>
+					</ul>
+
+
+					<h3>Project Outcome</h3>
+
+					<p>
+						This project demonstrates the use of SQL to clean, explore,
+						and analyze retail transaction data. The analysis focuses on
+						extracting useful information from raw data through structured
+						SQL queries and aggregation techniques.
+					</p>
+
+
+					<ul class="actions special">
+						<li>
+							<a href="https://github.com/Hatem207/SQL-Retail-Sales" 
+							   target="_blank" 
+							   class="button">
+								GitHub
+							</a>
+						</li>
+					</ul>
+
+
+					<a href="../generic.html#sql" class="button back-link">
+						⬅ Back to Projects
+					</a>
+
+				</section>
+
+			</div>
+
+
+			<footer id="footer">
+
+				<section class="split contact">
+
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Shebin Elkom, menofia</p>
+					</section>
+
+					<section>
+						<h3>Phone</h3>
+						<p>
+							<a href="tel:+201099430032">
+								(+20) 01099430032
+							</a>
+						</p>
+					</section>
+
+					<section>
+						<h3>Email</h3>
+						<p>
+							<a href="mailto:hatemelhadry7@gmail.com">
+								hatemelhadry7@gmail.com
+							</a>
+						</p>
+					</section>
+
+					<section>
+						<h3>Social</h3>
+
+						<ul class="icons alt">
+							<li>
+								<a href="https://www.facebook.com/ha.tem.445356"
+								   target="_blank"
+								   class="icon brands alt fa-facebook-f">
+									<span class="label">Facebook</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://instagram.com/ha.tem"
+								   target="_blank"
+								   class="icon brands alt fa-instagram">
+									<span class="label">Instagram</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://linkedin.com/in/hatem-el-hadary"
+								   target="_blank"
+								   class="icon brands alt fa-linkedin-in">
+									<span class="label">LinkedIn</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://github.com/Hatem207"
+								   target="_blank"
+								   class="icon brands alt fa-github">
+									<span class="label">GitHub</span>
+								</a>
+							</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+			</footer>
+
+
+			<div id="copyright">
+				<ul>
+					<li>&copy; HNEL</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
+```
